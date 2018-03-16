@@ -42,13 +42,11 @@ End Sub
 
 Private Function getNextWorkday(ByRef dtDate) As String
 
-    While Not isWorkday(dtDate)
-        dtDate = DateSerial(Year(dtDate), Month(dtDate), day(dtDate) + 1)
-    Wend
-    
+    If Not isWorkday(dtDate) Then
+        dtDate = getNextWorkday(DateSerial(Year(dtDate), Month(dtDate), day(dtDate) + 1))
+    End If
     getNextWorkday = dtDate
-    'Debug.Print "Next Workday is " & dtDate
-    
+
 End Function
 
 
