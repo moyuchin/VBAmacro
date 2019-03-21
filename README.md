@@ -13,4 +13,4 @@ OutlookAutoDelaySend
 あらかじめ配信タイミングが設定されている場合は、その設定を維持します。
 
 ## Install
-OutlookのVisual Basicにコードをコピペします。
+Wikiに書きました。
