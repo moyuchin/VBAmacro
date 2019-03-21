@@ -1,3 +1,9 @@
 Private Sub Application_ItemSend(ByVal Item As Object, Cancel As Boolean)
     Call SetDeliveryTime(Item)
 End Sub
+
+
+Private Sub Application_Startup()
+    g_flag_BusinessTrip = False  'Trueにすると、常にすぐに送信する
+    g_flag_SendImmediate = False
+End Sub
